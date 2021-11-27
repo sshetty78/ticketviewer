@@ -43,8 +43,6 @@ class Ticket:
 		for ticket_info in ticket_list:
 			ticket = Ticket(ticket_info)
 			ticket_obj_dict[ticket.id] = ticket
-			# ticket_info_list[ticket.id] = [ticket.id, "Ticket with Subject %s " % ticket.subject, "created on %s at %s " % (
-			# 	ticket.created_on, ticket.created_at), "by %s" % ticket.submitter_id]
 			ticket_info_dict[ticket.id] = [ticket.id, ticket.subject, ticket.created_on, ticket.created_at,
 										   ticket.submitter_id]
 		return ticket_obj_dict, ticket_info_dict
